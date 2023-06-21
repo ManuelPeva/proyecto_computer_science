@@ -28,11 +28,38 @@
             </form>
         </div>
     </nav>
+    <hr>
+    <br>
+
+    <br>
 
     <!--Fin del nav -->
 
-    
+    <div class="container-fluid filters">
+        <label for="floatingInput category">Categoría</label> <!--Observar comportamiento-->
+        <select class="form-select" id="category" aria-label="Default select example">
+            <option selected>Selecciona una Categoría</option>
+            <option value="Electrónica">Electrónica</option>
+            <option value="Ropa">Ropa</option>
+            <option value="Hogar">Hogar</option>
+          </select>
 
+          <label for="floatingInput price">Precio</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <input type="text" id="price" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+            <button type="button" class="btn btn-primary">Primary</button>
+          </div>
+      </div>
+      
+      <div class="card" id="productList" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
