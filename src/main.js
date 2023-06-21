@@ -16,8 +16,6 @@
     }
     }
 
-
-
     // Función para mostrar los productos filtrados
     async function mostrarProductosFiltrados() {
     // Cargar productos desde la API
@@ -35,6 +33,16 @@
         cardElement.style.marginLeft = '2.55rem';
         
 
+        // Agregar evento de mouseover para mostrar la sombra al pasar el cursor
+cardElement.addEventListener('mouseover', () => {
+    cardElement.style.boxShadow = '10px 5px 5px #88FF4D';
+    
+  });
+  
+  // Agregar evento de mouseout para quitar la sombra al retirar el cursor
+  cardElement.addEventListener('mouseout', () => {
+    cardElement.style.boxShadow = '';
+  });
 
         const imageElement = document.createElement('img');
         imageElement.classList.add('card-img-top');
