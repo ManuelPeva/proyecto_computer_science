@@ -10,14 +10,21 @@
 
 <body>
     <!--Fin del nav -->
-    <nav class="navbar bg-primary" data-bs-theme="dark">
+
+    <nav class="navbar bg-primary fixed-top" data-bs-theme="dark">
         <!-- Navbar content -->
         <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html"><strong>Mi app</strong></a>
-        <form class="d-flex" role="search">
-            <input class="form-control me-3 bg-white text-black" type="search" placeholder="Buscar" aria-label="Search">
-            <button class="btn btn-light btn-outline-Secondary me-2" type="submit">Buscar</button>
-        </form>
+            <a class="navbar-brand me-5" href="./index.html"><strong>Mi app</strong></a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><strong>Home</strong></a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-3 bg-white text-black" type="search" placeholder="Buscar"
+                    aria-label="Search">
+                <button class="btn btn-light btn-outline-Secondary me-2" type="submit">Buscar</button>
+            </form>
         </div>
     </nav>
 
