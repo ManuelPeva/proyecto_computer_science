@@ -28,29 +28,32 @@
             </form>
         </div>
     </nav>
+    <br>
+    <br>
     <hr>
     <br>
 
     <br>
 
     <!--Fin del nav -->
-
-    <div class="container-fluid filters">
-        <label for="floatingInput category">Categoría</label> <!--Observar comportamiento-->
-        <select class="form-select" id="category" aria-label="Default select example">
-            <option selected>Selecciona una Categoría</option>
-            <option value="Electrónica">Electrónica</option>
-            <option value="Ropa">Ropa</option>
-            <option value="Hogar">Hogar</option>
-          </select>
-
-          <label for="floatingInput price">Precio</label>
-          <div class="input-group mb-3">
-            <span class="input-group-text">$</span>
-            <input type="text" id="price" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-            <button type="button" class="btn btn-primary">Primary</button>
-          </div>
+    <div class="filters">
+        <label class="form-label" for="category"><strong> Categoría:</strong></label>
+        <select id="category">
+          <option value="">Todas</option>
+          <option value="Electrónica">Electrónica</option>
+          <option value="Ropa">Ropa</option>
+          <option value="Hogar">Hogar</option>
+        </select>
+        
+        <label for="price"><strong>Precio:</strong></label>
+        <input type="text" id="price">
+        
+        <button class="btn btn-primary" id="filterBtn">Filtrar</button>
       </div>
+      
+      <div id="productList"></div>
+    
+      
       
       <div class="card" id="productList" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
