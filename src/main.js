@@ -1,11 +1,11 @@
-    // URL de la API de productos
-    const apiUrl = 'https://rickandmortyapi.com/api/character/?page=19';
+// URL de la API de productos
+const apiUrl = 'https://rickandmortyapi.com/api/character/?page=42';
 
-    // Obtener referencias a los elementos HTML
-    const productList = document.getElementById('productList');
+// Obtener referencias a los elementos HTML
+const productList = document.getElementById('productList');
 
-    // Función para cargar los productos desde la API
-    async function cargarProductos() {
+// Función para cargar los productos desde la API
+async function cargarProductos() {
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
@@ -14,10 +14,10 @@
         console.error('Error al cargar los productos:', error);
         return [];
     }
-    }
+}
 
-    // Función para mostrar los productos filtrados
-    async function mostrarProductosFiltrados() {
+// Función para mostrar los productos filtrados
+async function mostrarProductosFiltrados() {
     // Cargar productos desde la API
     const productos = await cargarProductos();
 
@@ -31,18 +31,18 @@
         cardElement.style.width = '19rem';
         cardElement.style.marginBottom = '1.25rem';
         cardElement.style.marginLeft = '2.55rem';
-        
+     
 
         // Agregar evento de mouseover para mostrar la sombra al pasar el cursor
-cardElement.addEventListener('mouseover', () => {
-    cardElement.style.boxShadow = '10px 5px 5px #88FF4D';
-    
-  });
-  
-  // Agregar evento de mouseout para quitar la sombra al retirar el cursor
-  cardElement.addEventListener('mouseout', () => {
-    cardElement.style.boxShadow = '';
-  });
+        cardElement.addEventListener('mouseover', () => {
+            cardElement.style.boxShadow = '10px 5px 5px #88FF4D';
+
+        });
+
+        // Agregar evento de mouseout para quitar la sombra al retirar el cursor
+        cardElement.addEventListener('mouseout', () => {
+            cardElement.style.boxShadow = '';
+        });
 
         const imageElement = document.createElement('img');
         imageElement.classList.add('card-img-top');
@@ -67,13 +67,18 @@ cardElement.addEventListener('mouseover', () => {
 
         const linkElement = document.createElement('a');
         linkElement.classList.add('btn', 'btn-primary');
-        linkElement.href = '#';
+        
+        linkElement.href = 'https://www.justwatch.com/mx/serie/rick-and-morty';
         linkElement.textContent = 'ver este episodio';
+        linkElement.style.backgroundColor = '#3C8F9F'; // Establecer el color de fondo
+        linkElement.style.borderColor = '#D0D949'; // Establecer el color de borde
+
         cardBodyElement.appendChild(linkElement);
+
 
         productList.appendChild(cardElement);
     });
-    }
+}
 
-    // Mostrar todos los productos al cargar la página
-    mostrarProductosFiltrados();
+// Mostrar todos los productos al cargar la página
+mostrarProductosFiltrados();
